@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Loader } from "../../utils/Atom";
 import styled from "styled-components";
 
+//
 function Survey() {
   const [surveyData, setSurveyData] = useState();
   const [dataLoading, setDataLoading] = useState(false);
