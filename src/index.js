@@ -12,6 +12,8 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   div {
         font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        margin:0 1.5rem;
+        text-align:center;
     }`;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

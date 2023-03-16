@@ -4,22 +4,30 @@ import colors from "../../utils/style/colors";
 
 //Utilisation du CSS in JS
 const CardLabel = styled.span`
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+`;
+const CardTitle = styled.span`
   color: #5843e4;
   font-size: 22px;
   font-weight: bold;
 `;
 const CardImage = styled.img`
-  height: 80px;
-  width: 80px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
+  margin: auto;
 `;
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   padding: 15px;
   background-color: ${colors.backgroundLight};
   border-radius: 30px;
-  width: 350px;
+  width: 250px;
   transition: 200ms;
   &:hover {
     cursor: pointer;
@@ -30,9 +38,9 @@ const CardWrapper = styled.div`
 function Card({ label, title, picture }) {
   return (
     <CardWrapper>
-      <CardLabel>{label}</CardLabel>
+      <CardTitle>{title}</CardTitle>
       <CardImage src={picture} alt="freelance" />
-      <span>{title}</span>
+      <CardLabel>{label}</CardLabel>
     </CardWrapper>
   );
 }
